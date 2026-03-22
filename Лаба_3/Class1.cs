@@ -22,4 +22,13 @@ class Invoice
         this.paid = false;
         count++;
     }
+    public void Pay()//робимо рахунок оплаченим
+    {
+        paid = true;
+    }
+    public bool IsPaid() //перевіряємо чи він оплачений
+    { 
+        return paid; 
+    }
+        
 }
