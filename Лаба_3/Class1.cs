@@ -30,5 +30,8 @@ class Invoice
     { 
         return paid; 
     }
-        
+    public double Price()//суму отримуємо через властивість тільки для читання
+    {
+        get { return price; }
+    }
 }
