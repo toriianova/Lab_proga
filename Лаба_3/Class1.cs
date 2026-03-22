@@ -34,4 +34,12 @@ class Invoice
     {
         get { return price; }
     }
+    public static int GetInvoiceCount()
+    {
+        return count;//повертає кількість рахунків
+    }
+    public override string ToString()//перевизначення методу
+    {
+        return $"Рахунок: {number}, Сума: {price}, Сплачено: {paid}";
+    }
 }
