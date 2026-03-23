@@ -1,8 +1,10 @@
-﻿using System;
-
+﻿using Newtonsoft.Json;
+using System;
+using System.IO;
 class Invoice
 {
-    private readonly int number;
+    //private readonly int number;
+    private  int number;
     private double price;
     private bool paid;
 
@@ -41,5 +43,21 @@ class Invoice
     public override string ToString()//перевизначення методу
     {
         return $"Рахунок: {number}, Сума: {price}, Сплачено: {paid}";
+    }
+    public Invoice()
+    {
+
+    }
+    public void SaveToJson(string fileName)
+    {
+        string jsonString = JsonConvert.SerializeObject(this);
+        File.WriteAllText(fileName, jsonString);
+    }
+
+    public static Invoice FromJson(string fileName)
+    {
+        string jsonString = File.ReadAllText(fileName);
+        Invoice obj = JsonConvert.DeserializeObject<Invoice>(jsonString);
+        return obj;
     }
 }

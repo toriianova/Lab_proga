@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Text;
+using Newtonsoft.Json;
+using System.IO;
 class Program
 {
     static void Main()
@@ -17,5 +19,11 @@ class Program
         Console.WriteLine(inv1);
 
         Console.WriteLine("\nКількість рахунків: " + Invoice.GetInvoiceCount());
+       
+        inv1.SaveToJson("invoice1.json");
+
+        Invoice invFromFile = Invoice.FromJson("invoice1.json");
+
+        Console.WriteLine(invFromFile);
     }
 }

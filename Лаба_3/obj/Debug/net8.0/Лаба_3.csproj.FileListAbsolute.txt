@@ -13,3 +13,6 @@ D:\Lab_proga\Лаба_3\obj\Debug\net8.0\refint\Лаба_3.dll
 D:\Lab_proga\Лаба_3\obj\Debug\net8.0\Лаба_3.pdb
 D:\Lab_proga\Лаба_3\obj\Debug\net8.0\Лаба_3.genruntimeconfig.cache
 D:\Lab_proga\Лаба_3\obj\Debug\net8.0\ref\Лаба_3.dll
+D:\Lab_proga\Лаба_3\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Lab_proga\Лаба_3\obj\Debug\net8.0\Лаба_3.csproj.AssemblyReference.cache
+D:\Lab_proga\Лаба_3\obj\Debug\net8.0\Лаба_3.csproj.Up2Date
