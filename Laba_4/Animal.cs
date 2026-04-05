@@ -48,4 +48,26 @@ namespace Laba_4
             Console.WriteLine("Собака кусає");
         }
     }
+    class Puppy : Dog
+    {
+        public Puppy(string name) : base(name)
+        {
+            Console.WriteLine("Викликано конструктор Puppy");
+        }
+
+        public void Jump()
+        {
+            Console.WriteLine("Щеня стрибає");
+        }
+
+        public override void MakeSound()
+        {
+            Console.WriteLine("Щеня пищить");
+        }
+
+        public override void Run()
+        {
+            Console.WriteLine("Щеня біжить");
+        }
+    }
 }
