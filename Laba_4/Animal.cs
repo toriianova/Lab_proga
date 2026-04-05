@@ -30,6 +30,23 @@ namespace Laba_4
         {
             Console.WriteLine("Тварина біжить");
         }
+        public override string ToString()
+        {
+            return $"Animal: {Name}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Animal other)
+                return Name == other.Name;
+
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return Name.GetHashCode();
+        }
     }
     class Dog : Animal
     {
@@ -40,12 +57,29 @@ namespace Laba_4
 
         public override void MakeSound()
         {
-            Console.WriteLine("Собака гавкає");
+            Console.WriteLine($"{Name} гавкає");
         }
 
         public void Bite()
         {
-            Console.WriteLine("Собака кусає");
+            Console.WriteLine($"{Name} кусає");
+        }
+        public override string ToString()
+        {
+            return $"Dog: {Name}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Dog other)
+                return Name == other.Name;
+
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return Name.GetHashCode();
         }
     }
     class Puppy : Dog
@@ -57,17 +91,34 @@ namespace Laba_4
 
         public void Jump()
         {
-            Console.WriteLine("Щеня стрибає");
+            Console.WriteLine($"{Name} стрибає");
         }
 
         public override void MakeSound()
         {
-            Console.WriteLine("Щеня пищить");
+            Console.WriteLine($"{Name} пищить");
         }
 
         public override void Run()
         {
-            Console.WriteLine("Щеня біжить");
+            Console.WriteLine($"{Name} біжить");
+        }
+        public override string ToString()
+        {
+            return $"Puppy: {Name}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Puppy other)
+                return Name == other.Name;
+
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return Name.GetHashCode();
         }
     }
 }
