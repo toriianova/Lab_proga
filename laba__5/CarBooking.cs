@@ -8,7 +8,7 @@ namespace laba_5
 {
         public class CarBooking : Booking
         {
-            public double InsuranceFee { get; set; }
+            public double InsuranceFee { get; set; }//страховий збір
 
             public CarBooking(int id, double baseCost, int days, double insuranceFee)
                 : base(id, baseCost, days)

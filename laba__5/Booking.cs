@@ -12,9 +12,9 @@ namespace laba_5
             public double BaseCost { get; set; }
             public int Duration { get; set; }
 
-            public Booking(int id, double baseCost, int duration)
+            public Booking(int id, double baseCost, int duration)//номер, ціна, тривалість
             {
-                Id = id;
+                Id = id;//записуємо змінні в об'єкт
                 BaseCost = baseCost;
                 Duration = duration;
             }
@@ -26,7 +26,7 @@ namespace laba_5
                 return $"ID: {Id}, BaseCost: {BaseCost}, Duration: {Duration}";
             }
 
-            public virtual void Cancel()
+            public virtual void Cancel()//метод скасовує бронювання
             {
                 Console.WriteLine($"Booking {Id} cancelled.");
             }
