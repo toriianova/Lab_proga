@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace laba_5
 {
-        public class BookingSystem
+        public class BookingSystem//клас на систему бронювання
         {
-            private List<Booking> bookings = new List<Booking>();
+            private List<Booking> bookings = new List<Booking>();//список зберігає різні типи бронювань
 
             // Додати бронювання
             public void AddBooking(Booking booking)
@@ -30,7 +30,7 @@ namespace laba_5
             // Найдорожче бронювання
             public Booking GetMostExpensive()
             {
-                return bookings.OrderByDescending(b => b.CalculateTotalCost()).First();
+                return bookings.OrderByDescending(b => b.CalculateTotalCost()).First();//сортуємо від більшого до меншого + беерм перше число (найдорожче)
             }
 
             // Середня вартість

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace laba_5
 {
-        public interface ICancellable
+        public interface ICancellable //інтерфейс, який дає скасувати бронювання
         {
             void Cancel();
         }
